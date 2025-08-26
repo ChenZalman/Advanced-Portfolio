@@ -1,0 +1,7 @@
+span {
+    padding: 10px;
+    outline: 1px salmon solid;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

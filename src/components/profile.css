@@ -1,0 +1,89 @@
+.img-container {
+    margin: 0 30px 10px 0;
+}
+
+.img-spinner {
+    margin: 0px;
+    padding: 5px;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    border-radius: 50%;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg
+    }
+
+    to {
+        --angle: 360deg
+    }
+}
+
+.img-spinner::after,
+.img-spinner::before {
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), red, blue, red, blue, red);
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 50%;
+    animation: spin 4s linear infinite;
+    /* padding: 1px; */
+}
+
+.img-spinner::after {
+    filter: blur(1.5rem);
+    opacity: 0.4;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.header {
+    outline: 1px solid;
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    width: cals(100% - 10px);
+}
+
+.links {
+    margin: 0 auto;
+    align-content: center;
+    outline: 1px salmon solid;
+}
+
+.footer {
+    display: flex;
+    align-content: end;
+    outline: 1px red solid;
+    position: relative;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 2px
+}
+
+.card{
+    outline: 1px solid;
+    text-align: center;
+}
+
+.projects-carousel{
+    
+}

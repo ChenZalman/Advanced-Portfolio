@@ -1,0 +1,4 @@
+.slide-track{
+    display: flex;
+    flex-wrap: wrap;
+}
