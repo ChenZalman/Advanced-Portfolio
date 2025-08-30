@@ -4,7 +4,7 @@ import { auto } from '@cloudinary/url-gen/actions/resize';
 import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 import { AdvancedImage } from '@cloudinary/react';
 
-const App = () => {
+const CloudinaryComponent = () => {
   // const cld = new Cloudinary({ cloud: { cloudName: 'dlvjhgsbe' } });
   const cld = new Cloudinary({ cloud: { cloudName: process.env.REACT_APP_CLOUD_NAME } });
   
@@ -18,4 +18,4 @@ const App = () => {
   return (<AdvancedImage cldImg={img}/>);
 };
 
-export default App
+export default CloudinaryComponent

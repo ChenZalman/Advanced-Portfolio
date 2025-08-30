@@ -7,7 +7,7 @@ import Projects from './projects'
 import about from '../data/about'
 import dataExperiences from '../data/experiences'
 import Experience from './Experience'
-import App from './cloudinary'
+import CloudinaryComponent from './cloudinary'
 
 export default function Profile() {
   return (
@@ -16,7 +16,7 @@ export default function Profile() {
         <div className='img-container'>
           <div className='img-spinner'>
             {/* <img src='images/my_picture.jpg' alt='no' /> */}
-            <App/>
+            <CloudinaryComponent/>
           </div>
         </div>
         <div className='name-and-title'>
