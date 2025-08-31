@@ -39,7 +39,7 @@ export default function Profile() {
         <h1>
           Projects
         </h1>
-        {/* <Projects /> */}
+        <Projects />
       </div>
       <div className='card'>
         <h1>
