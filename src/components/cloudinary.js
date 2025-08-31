@@ -6,7 +6,7 @@ import { AdvancedImage } from '@cloudinary/react';
 
 const CloudinaryComponent = () => {
   // const cld = new Cloudinary({ cloud: { cloudName: 'dlvjhgsbe' } });
-  const cld = new Cloudinary({ cloud: { cloudName: process.env.REACT_APP_CLOUD_NAME, apiKey: process.env.REACT_APP_CLOUD_API_KEY } });
+  const cld = new Cloudinary({ cloud: { cloudName: process.env.REACT_APP_CLOUD_NAME }, api:{apiKey: process.env.REACT_APP_CLOUD_API_KEY} });
   
   // Use this sample image or upload your own via the Media Explorer
   const img = cld
