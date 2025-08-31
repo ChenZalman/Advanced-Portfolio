@@ -7,7 +7,7 @@ import Projects from './projects'
 import about from '../data/about'
 import dataExperiences from '../data/experiences'
 import Experience from './Experience'
-import CloudinaryComponent from './cloudinary'
+import SecureCloudinaryImage from './cloudinary'
 
 export default function Profile() {
   return (
@@ -16,7 +16,7 @@ export default function Profile() {
         <div className='img-container'>
           <div className='img-spinner'>
             {/* <img src='images/my_picture.jpg' alt='no' /> */}
-            <CloudinaryComponent/>
+            <SecureCloudinaryImage/>
           </div>
         </div>
         <div className='name-and-title'>
@@ -39,14 +39,14 @@ export default function Profile() {
         <h1>
           Projects
         </h1>
-        <Projects />
+        {/* <Projects /> */}
       </div>
       <div className='card'>
         <h1>
           Experience
         </h1>
-        {dataExperiences.map((experience) => (
-          <Experience props={experience} />
+        {dataExperiences.map((experience,i) => (
+          <Experience props={experience} key={i} />
         ))}
       </div>
       <div className='footer'>
