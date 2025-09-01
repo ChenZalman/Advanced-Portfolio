@@ -7,7 +7,7 @@ cloudinary.v2.config({
   secure: true,
 });
 
-export async function handler(event) {
+export default async (event) => {
   try {
     const { public_id } = JSON.parse(event.body || "{}");
     console.log("Get: " + public_id)
