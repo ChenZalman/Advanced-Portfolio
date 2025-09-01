@@ -27,7 +27,7 @@ const SecureCloudinaryImage = () => {
   const [imgUrl, setImgUrl] = useState("");
 
   useEffect(() => {
-    fetch("/.netlify/functions/get-signed-url", {
+    fetch("/netlify/functions/get-signed-url", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ public_id: "my_picture_vrb9vt" }),
