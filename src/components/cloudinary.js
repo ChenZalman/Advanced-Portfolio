@@ -28,7 +28,8 @@ const SecureCloudinaryImage = () => {
 
   useEffect(() => {
     fetch("/.netlify/functions/get-signed-url", {
-      params: JSON.stringify({ public_id: "my_picture_vrb9vt" }),
+      method: "POST",
+      body: JSON.stringify({ public_id: "my_picture_vrb9vt" }),
     })
       .then((res) => res.json())
       .then((data) => setImgUrl(data.url));

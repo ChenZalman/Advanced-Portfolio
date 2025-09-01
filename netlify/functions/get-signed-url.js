@@ -9,14 +9,22 @@ cloudinary.v2.config({
 
 export default async (req, context) => {
   try {
-    const { public_id } = JSON.parse(req.params || "{}");
-    console.log("Get: " + public_id)
+    const { public_id } = JSON.parse(req.body || "{}");
+    console.log("Get:", public_id);
+
     const url = cloudinary.v2.url(public_id, {
-      type: "authenticated", // change to "upload" if your asset is Public
+      type: "authenticated", // change to "upload" if your asset is public
       sign_url: true,
       transformation: [
-        { width: 500, height: 500, crop: "fill", gravity: "auto", fetch_format: "auto", quality: "auto" }
-      ]
+        {
+          width: 500,
+          height: 500,
+          crop: "fill",
+          gravity: "auto",
+          fetch_format: "auto",
+          quality: "auto",
+        },
+      ],
     });
 
     return {
@@ -29,4 +37,4 @@ export default async (req, context) => {
       body: JSON.stringify({ error: err.message }),
     };
   }
-}
+};
