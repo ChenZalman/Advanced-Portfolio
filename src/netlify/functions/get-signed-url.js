@@ -7,9 +7,9 @@ cloudinary.v2.config({
   secure: true,
 });
 
-export default async (event) => {
+export default async (req, context) => {
   try {
-    const { public_id } = JSON.parse(event.body || "{}");
+    const { public_id } = JSON.parse(req.body || "{}");
     console.log("Get: " + public_id)
     const url = cloudinary.v2.url(public_id, {
       type: "authenticated", // change to "upload" if your asset is Public
