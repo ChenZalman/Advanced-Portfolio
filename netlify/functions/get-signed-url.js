@@ -12,8 +12,8 @@ exports.handler = async (event, context) => {
     const { public_id } = JSON.parse(event.body || "{}");
 
     const url = cloudinary.url(public_id, {
-      type: "authenticated",
-      sign_url: true,
+      // type: "authenticated",
+      // sign_url: true,
       transformation: [
         {
           width: 500,
