@@ -1,4 +1,4 @@
-/* .slide-track{
-    display: flex;
-    flex-wrap: wrap;
-} */
+.slide{
+    margin: 0;
+    padding: 0;
+}

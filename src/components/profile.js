@@ -15,8 +15,9 @@ export default function Profile() {
       <div className='header'>
         <div className='img-container'>
           <div className='img-spinner'>
-            {/* <img src='images/my_picture.jpg' alt='no' /> */}
-            <SecureCloudinaryImage/>
+            <img src='images/my_picture.jpeg' alt='no' />
+            {/* <img src='https://drive.google.com/uc?export=view&id=1CyHDsA56rWGz4nK47arZErobodvJB8A4' alt='no'/> */}
+            {/* <SecureCloudinaryImage/> */}
           </div>
         </div>
         <div className='name-and-title'>

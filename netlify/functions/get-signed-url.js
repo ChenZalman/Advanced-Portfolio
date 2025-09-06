@@ -14,16 +14,16 @@ exports.handler = async (event, context) => {
     const url = cloudinary.url(public_id, {
       type: "authenticated",
       sign_url: true,
-      // transformation: [
-      //   {
-      //     width: 500,
-      //     height: 500,
-      //     crop: "fill",
-      //     gravity: "auto",
-      //     fetch_format: "auto",
-      //     quality: "auto",
-      //   },
-      // ],
+      transformation: [
+        {
+          width: 500,
+          height: 500,
+          crop: "fill",
+          gravity: "auto",
+          fetch_format: "auto",
+          quality: "auto",
+        },
+      ],
     });
 
     return {
