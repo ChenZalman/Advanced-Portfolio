@@ -1,6 +1,8 @@
 import './projects.css'
 import Carousel from 'react-multi-carousel'
 import "react-multi-carousel/lib/styles.css"
+import dataProjects from '../data/projects'
+import Project from './Project';
 
 export default function Projects() {
 
@@ -25,8 +27,11 @@ export default function Projects() {
     };
 
     return (
-        <div>
-            <Carousel
+        <div style={{display: 'flex'}}>
+            {dataProjects.map(project => (
+                <Project props={project}/>
+            ))}
+            {/* <Carousel
                 autoPlaySpeed={1}
                 autoPlay={true}
                 responsive={responsive}
@@ -61,7 +66,7 @@ export default function Projects() {
                 <div className='slide'>
                     <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7354576918756622336" height="432" width="504" frameBorder={0} title='embeded post'></iframe>
                 </div>
-            </Carousel>
+            </Carousel> */}
         </div>
     )
 }

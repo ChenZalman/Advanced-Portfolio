@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
-const SecureCloudinaryImage = () => {
+const SecureCloudinaryImage = ({publicId}) => {
   const [imgUrl, setImgUrl] = useState("");
 
   useEffect(() => {
     try{
     fetch("/.netlify/functions/get-signed-url", {
       method: "POST",
-      body: JSON.stringify({ public_id: "my_picture_vrb9vt.jpg" }),
+      body: JSON.stringify({ public_id: publicId }),
     })
       .then((res) => res.json())
       .then((data) => setImgUrl(data.url));
