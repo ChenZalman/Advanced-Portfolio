@@ -16,7 +16,7 @@ const SecureCloudinaryImage = ({id,publicId}) => {
   catch(err){
     console.log(err.message)
   }
-  }, []);
+  }, [publicId]);
 
   if (!imgUrl) return <p>Loading...</p>;
 
