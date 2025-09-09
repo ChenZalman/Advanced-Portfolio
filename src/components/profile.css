@@ -7,7 +7,6 @@
     width: 200px;
     position: relative;
     border-radius: 50%;
-    /* outline: 2px salmon solid; */
 }
 
 @property --angle {
@@ -54,7 +53,6 @@
 }
 
 .header {
-    outline: 1px solid;
     display: flex;
     flex: 1;
     padding: 20px;
@@ -68,12 +66,10 @@
     align-content: center;
     position: absolute;
     right: 0;
-    outline: 1px salmon solid;
 }
 
 .footer {
     display: flex;
-    outline: 1px red solid;
     position: relative;
     bottom: 10px;
     left: 0;
