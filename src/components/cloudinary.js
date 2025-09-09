@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import './profile.css'
 
-const SecureCloudinaryImage = ({publicId}) => {
+const SecureCloudinaryImage = ({id,publicId}) => {
   const [imgUrl, setImgUrl] = useState("");
 
   useEffect(() => {
@@ -21,8 +22,8 @@ const SecureCloudinaryImage = ({publicId}) => {
 
   return (
   <>
-  {console.log("This is the url " + imgUrl)}
-  <img src={imgUrl} alt="Profile not found" />
+  {console.log("This is the url " + id)}
+  <img className={id} src={imgUrl} alt="Profile not found" />
   </>);
 };
 
